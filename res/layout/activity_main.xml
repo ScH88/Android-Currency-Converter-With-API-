@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sidescrollerproj.currencyconverter.MainActivity"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/background">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text=""
+        android:textSize="40dp"
+        android:layout_marginLeft="@dimen/curr_label_seperate"
+        android:background="@color/userInput"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/currency_from_logo" />
+
+    <RelativeLayout
+        android:id="@+id/spinnerFromContainer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/userInput"
+        android:layout_below="@+id/editText"
+        android:layout_toEndOf="@+id/fromHead"
+        android:layout_marginLeft="@dimen/curr_label_seperate"
+        android:layout_marginTop="30dp">
+        <Spinner
+            android:id="@+id/spinnerFrom"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            style="@style/Widget.AppCompat.DropDownItem.Spinner"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/spinnerToContainer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/userInput"
+        android:layout_below="@+id/spinnerFromContainer"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_alignStart="@+id/spinnerFromContainer"
+        android:layout_marginTop="16dp">
+        <Spinner
+            android:id="@+id/spinnerTo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            style="@style/Widget.AppCompat.DropDownItem.Spinner"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/convert_button_text"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/spinnerToContainer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <TextView
+        android:id="@+id/resultHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/result_label"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/result_placeholder"
+        android:layout_marginLeft="@dimen/curr_label_seperate"
+        android:layout_alignBaseline="@+id/resultHead"
+        android:layout_alignBottom="@+id/resultHead"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/currency_to_logo" />
+
+    <TextView
+        android:id="@+id/fromHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="@string/from_head"
+        android:layout_above="@+id/spinnerToContainer"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/spinnerToContainer"
+        android:textSize="40sp"
+        android:text="@string/to_head"/>
+
+    <TextView
+        android:id="@+id/currency_from_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/editText"
+        android:textSize="40sp"
+        android:text="£" />
+
+    <TextView
+        android:id="@+id/currency_to_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="£"
+        android:layout_marginLeft="@dimen/curr_label_seperate"
+        android:layout_alignBottom="@+id/resultHead"
+        android:layout_toEndOf="@+id/resultHead" />
+</RelativeLayout>

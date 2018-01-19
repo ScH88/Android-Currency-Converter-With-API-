@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="curr_label_seperate">10dp</dimen>
+</resources>

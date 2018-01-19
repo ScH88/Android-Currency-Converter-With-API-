@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CurrencyConverter</string>
+    <string name="convert_button_text">Convert</string>
+    <string name="result_placeholder">______</string>
+    <string name="result_label">Result:</string>
+    <string name="from_head">From:</string>
+    <string name="to_head">To:</string>
+    <string name="wait_text">Wait</string>
+    <string-array name="currency">
+        <item>GBP</item>
+        <item>USD</item>
+        <item>EUR</item>
+    </string-array>
+</resources>
